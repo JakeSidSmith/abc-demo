@@ -36,3 +36,8 @@ p {
     text-overflow: ellipsis;
     overflow: hidden;*/
 }
+
+.data-table input {
+    display: block;
+    border: 1px solid black;
+}

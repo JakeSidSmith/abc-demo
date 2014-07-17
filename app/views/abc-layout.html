@@ -87,16 +87,18 @@
     <input class="col-xs-2" type="number" ng-model="settings.pointHoverSize"/>
   </div>
 
-  <div class="col-xs-12">
-    <h4>Data</h4>
+  <div class="data-table">
+    <div class="col-xs-12">
+      <h4>Data</h4>
 
-    <input class="col-xs-2 col-sm-1" type="text"/>
-    <input class="col-xs-2 col-sm-1" type="text" ng-repeat="column in settings.headers.columns" ng-model="column.value" ng-mouseover="setHovering($index, -1)" ng-mouseleave="clearHovering()"/>
-  </div>
+      <input class="col-xs-2 col-sm-1" type="text"/>
+      <input class="col-xs-2 col-sm-1" type="text" ng-repeat="column in settings.headers.columns" ng-model="column.value" ng-mouseover="setHovering($index, -1)" ng-mouseleave="clearHovering()"/>
+    </div>
 
-  <div class="col-xs-12" ng-repeat="points in settings.data">
-    <input ng-style="{'background-color': colors[$index % colors.length]}" class="col-xs-2 col-sm-1" type="text" ng-model="settings.headers.rows[$index].value" ng-mouseover="setHovering(-1, $index)" ng-mouseleave="clearHovering()">
-    <input ng-style="{'background-color': colors[$parent.$index % colors.length]}" class="col-xs-2 col-sm-1" type="number" name="some_name" ng-repeat="point in points" ng-model="point.value" ng-mouseover="setHovering($index, $parent.$index)" ng-mouseleave="clearHovering()">
+    <div class="col-xs-12" ng-repeat="points in settings.data">
+      <input ng-style="{'background-color': colors[$index % colors.length]}" class="col-xs-2 col-sm-1" type="text" ng-model="settings.headers.rows[$index].value" ng-mouseover="setHovering(-1, $index)" ng-mouseleave="clearHovering()">
+      <input ng-style="{'background-color': colors[$parent.$index % colors.length]}" class="col-xs-2 col-sm-1" type="number" name="some_name" ng-repeat="point in points" ng-model="point.value" ng-mouseover="setHovering($index, $parent.$index)" ng-mouseleave="clearHovering()">
+    </div>
   </div>
 
 </div>
