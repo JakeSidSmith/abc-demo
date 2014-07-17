@@ -91,11 +91,24 @@ app.controller('MainCtrl', ['$scope', 'ABC', function ($scope, ABC) {
       xLabels: function (value) {
         return value + ' 2014';
       },
+      popupHeaders: function (value) {
+        return value + ' 2014';
+      },
       popupLabels: function (value) {
         return value + ':';
       },
       popupValues: transformValues
-    }
+    },
+    regions: [
+      {
+        start: 0,
+        end: 2,
+        title: 'Region 1',
+        size: 12,
+        titleY: 0.75,
+        color: 'red'
+      }
+    ]
   };
 
 }]);
